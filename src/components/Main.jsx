@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 
 const languages = [
   {
@@ -34,18 +35,21 @@ const languages = [
 ];
 
 const Main = () => {
+
+  const [language, setLanguage] = useState(languages[3]);
+
   return (
     <div className="container">
       <div className="row">
         <div className="col-12">
           {languages.map(language => {
-            return (<button className="btn btn-primary me-2 mt-4">{language.title}</button>)
+            return (<button key={language.id} className="btn btn-primary me-2 mt-4" onClick={() => setLanguage(language)}>{language.title}</button>)
           })}
         </div>
         <div className="col-12">
           <div className="card mt-5 p-3">
-            <h3>HTML</h3>
-            <p>HTML (HyperText Markup Language) è il linguaggio standard per creare pagine e applicazioni web. Struttura il contenuto web e fornisce elementi di base come titoli, paragrafi e immagini.</p>
+            <h3>{language.title}</h3>
+            <p>{language.description}</p>
           </div>
         </div>
       </div>
