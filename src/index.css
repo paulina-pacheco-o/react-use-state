@@ -8,11 +8,19 @@ header {
   height: 200px;
 }
 
+main {
+  height: 100vh;
+}
+
 .container {
   max-width: 1600px;
 }
 
 .col-100 {
+  width: 100%;
+}
+
+.col-12 {
   width: 100%;
 }
 

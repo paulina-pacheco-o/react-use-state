@@ -37,11 +37,11 @@ const Main = () => {
   return (
     <div className="container">
       <div className="row">
-        {languages.map(button => {
-          <div className="col-100">
-            <div className="btn btn-primary"></div>
-          </div>
-        })}
+        <div className="col-12">
+          {languages.map(language => {
+            return (<button className="btn btn-primary me-2 mt-4">{language.title}</button>)
+          })}
+        </div>
       </div>
     </div>
   )
