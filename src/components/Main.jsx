@@ -42,6 +42,12 @@ const Main = () => {
             return (<button className="btn btn-primary me-2 mt-4">{language.title}</button>)
           })}
         </div>
+        <div className="col-12">
+          <div className="card mt-5 p-3">
+            <h3>HTML</h3>
+            <p>HTML (HyperText Markup Language) è il linguaggio standard per creare pagine e applicazioni web. Struttura il contenuto web e fornisce elementi di base come titoli, paragrafi e immagini.</p>
+          </div>
+        </div>
       </div>
     </div>
   )
